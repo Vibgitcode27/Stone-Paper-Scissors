@@ -1,0 +1,66 @@
+import random
+s= "stone"
+p= "paper"
+c= "scissor"
+i=1
+You= 0
+Comp =0
+while(i):
+    i=i+1
+    U= input("Enter your selection:- \n")
+    lst = [s,p,c]
+    Computer = random.choice(lst)
+    print(Computer)
+    if (U==s) and (Computer==s):
+        print("Its a draw")
+        print("User =",You)
+        print("Computer =", Comp)
+    if (U==s) and (Computer==p):
+        print("Computer won!")
+        Comp= Comp+1
+        print("User =", You)
+        print("Computer =", Comp)
+    if (U==s) and (Computer==c):
+        print("You won")
+        You= You+1
+        print("User =", You)
+        print("Computer =", Comp)
+    if (U==p) and (Computer==s):
+        print("You won")
+        You= You+1
+        print("User =", You)
+        print("Computer =", Comp)
+    if (U==p) and (Computer==p):
+        print("Its a draw")
+        print("User =", You)
+        print("Computer =", Comp)
+    if (U==p) and (Computer==c):
+        print("computer won")
+        Comp=Comp+1
+        print("User =", You)
+        print("Computer =", Comp)
+    if (U==c) and (Computer==s):
+        print("Computer won")
+        Comp = Comp + 1
+        print("User =", You)
+        print("Computer =", Comp)
+    if (U==c) and (Computer==p):
+        print("You won")
+        You = You + 1
+        print("User =", You)
+        print("Computer =", Comp)
+    if (U==c)and(Computer==c):
+        print("Its a draw")
+        print("User =", You)
+        print("Computer =", Comp)
+    if i>10:
+        print("Game over")
+        break
+    else:
+        continue
+if Comp > You:
+    print("You lost")
+if You > Comp:
+    print("You won")
+if You ==Comp:
+    print("Its a draw")
